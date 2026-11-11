@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Urban Style: descubre las últimas tendencias en moda urbana, ropa y accesorios.">
+  <meta name="theme-color" content="#101010">
+  <title>Urban Style | Moda Urbana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    ENVÍOS A TODO COLOMBIA · NUEVA COLECCIÓN DISPONIBLE
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <header class="header">
+    <a href="#inicio" class="logo">URBAN<span>STYLE.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#colecciones">Colecciones</a>
+      <a href="#catalogo">Tienda</a>
+      <a href="#nosotros">Nosotros</a>
+    </nav>
+
+    <button class="cart-button" id="cartButton">
+      🛍️ Mi carrito <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- PORTADA -->
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="eyebrow">ESTILO QUE MARCA LA DIFERENCIA</span>
+        <h1>VISTE<br> <span>SIN LÍMITES.</span></h1>
+        <p>La calle es tu pasarela. Descubre prendas que representan tu personalidad y transforma tu manera de vestir.</p>
+        <a href="#catalogo" class="primary-btn">EXPLORAR COLECCIÓN ↗</a>
+        <div class="hero-note">NEW DROP / URBAN COLLECTION 2026</div>
+      </div>
+
+      <div class="hero-image"></div>
+
+      <div class="hero-number">01 / 04</div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="benefits">
+      <div>🚚 <span>Envíos nacionales</span></div>
+      <div>✦ <span>Moda exclusiva</span></div>
+      <div>↻ <span>Compra segura</span></div>
+      <div>♥ <span>Estilo auténtico</span></div>
+    </section>
+
+    <!-- COLECCIONES -->
+    <section class="collections section" id="colecciones">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">DESCUBRE TU ESTILO</span>
+          <h2>COLECCIONES <span>DESTACADAS</span></h2>
+        </div>
+        <a href="#catalogo" class="text-link">VER TODA LA TIENDA ↗</a>
+      </div>
+
+      <div class="collection-grid">
+        <a href="#catalogo" class="collection-card collection-one">
+          <div>
+            <span>01 / STREETWEAR</span>
+            <h3>URBAN<br>VIBES</h3>
+            <b>EXPLORAR ↗</b>
+          </div>
+        </a>
+
+        <a href="#catalogo" class="collection-card collection-two">
+          <div>
+            <span>02 / CASUAL</span>
+            <h3>DAILY<br>LOOK</h3>
+            <b>EXPLORAR ↗</b>
+          </div>
+        </a>
+
+        <a href="#catalogo" class="collection-card collection-three">
+          <div>
+            <span>03 / ACCESORIOS</span>
+            <h3>YOUR<br>DETAILS</h3>
+            <b>EXPLORAR ↗</b>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- PROMOCIÓN -->
+    <section class="promo">
+      <div>
+        <span>OFERTA ESPECIAL</span>
+        <h2>10% OFF EN TU COMPRA</h2>
+        <p>Utiliza nuestro cupón exclusivo y disfruta de tu primera compra.</p>
+      </div>
+      <div class="coupon-display">
+        <small>USA EL CÓDIGO</small>
+        <strong>URBAN10</strong>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="catalog section" id="catalogo">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">ENCUENTRA TU PRÓXIMO LOOK</span>
+          <h2>SHOP <span>THE DROP.</span></h2>
+        </div>
+        <p class="catalog-description">Prendas seleccionadas para destacar.</p>
+      </div>
+
+      <div class="filters">
+        <div class="filter-group">
+          <label for="categoryFilter">Categoría</label>
+          <select id="categoryFilter">
+            <option value="todos">Todas las categorías</option>
+            <option value="camisetas">Camisetas</option>
+            <option value="pantalones">Pantalones</option>
+            <option value="chaquetas">Chaquetas</option>
+            <option value="accesorios">Accesorios</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="sizeFilter">Talla</label>
+          <select id="sizeFilter">
+            <option value="todas">Todas las tallas</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="sortFilter">Ordenar por precio</label>
+          <select id="sortFilter">
+            <option value="default">Destacados</option>
+            <option value="low">Menor precio</option>
+            <option value="high">Mayor precio</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="results-count" id="resultsCount"></p>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <!-- BANNER -->
+    <section class="style-banner" id="nosotros">
+      <div class="style-banner-content">
+        <span>NO SIGAS TENDENCIAS. CRÉALAS.</span>
+        <h2>YOUR STYLE.<br>YOUR RULES.</h2>
+        <p>Urban Style es más que ropa: es actitud, identidad y libertad.</p>
+        <a href="#catalogo" class="primary-btn">DESCUBRIR MÁS ↗</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CARRITO LATERAL -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h2>MI CARRITO <span id="cartTitleCount">(0)</span></h2>
+      <button id="closeCart" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <div class="coupon-form">
+        <label for="couponInput">Cupón de descuento</label>
+        <div>
+          <input type="text" id="couponInput" placeholder="Ej: URBAN10">
+          <button id="applyCoupon">APLICAR</button>
+        </div>
+        <small id="couponMessage"></small>
+      </div>
+
+      <div class="totals">
+        <p>Subtotal <strong id="subtotal">$0</strong></p>
+        <p>Descuento <strong id="discount">$0</strong></p>
+        <h3>Total <strong id="total">$0</strong></h3>
+      </div>
+
+      <button class="checkout-btn" id="checkoutButton">
+        FINALIZAR COMPRA →
+      </button>
+      <button class="continue-btn" id="continueShopping">SEGUIR COMPRANDO</button>
+    </div>
+  </aside>
+
+  <!-- FINALIZAR COMPRA -->
+  <section class="checkout-modal" id="checkoutModal">
+    <div class="checkout-box">
+      <button class="modal-close" id="closeCheckout">✕</button>
+
+      <span class="eyebrow">YA CASI ES TUYO</span>
+      <h2>FINALIZAR <span>COMPRA.</span></h2>
+
+      <div class="checkout-summary">
+        <h3>RESUMEN DE TU PEDIDO</h3>
+        <div id="checkoutSummary"></div>
+        <p>Subtotal: <strong id="checkoutSubtotal">$0</strong></p>
+        <p>Descuento: <strong id="checkoutDiscount">$0</strong></p>
+        <h3>Total: <strong id="checkoutTotal">$0</strong></h3>
+      </div>
+
+      <form id="checkoutForm">
+        <h3>DATOS DE ENVÍO</h3>
+
+        <label for="customerName">Nombre completo</label>
+        <input type="text" id="customerName" required minlength="3" placeholder="Tu nombre completo">
+
+        <label for="customerEmail">Correo electrónico</label>
+        <input type="email" id="customerEmail" required placeholder="correo@ejemplo.com">
+
+        <label for="customerPhone">Teléfono</label>
+        <input type="tel" id="customerPhone" required pattern="[0-9]{10}" maxlength="10" placeholder="10 dígitos">
+
+        <label for="customerAddress">Dirección de entrega</label>
+        <input type="text" id="customerAddress" required minlength="5" placeholder="Dirección completa">
+
+        <label for="customerCity">Ciudad</label>
+        <input type="text" id="customerCity" required placeholder="Ciudad de entrega">
+
+        <label for="paymentMethod">Método de pago (simulado)</label>
+        <select id="paymentMethod" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Contraentrega">Pago contraentrega</option>
+          <option value="Transferencia">Transferencia bancaria</option>
+          <option value="Tarjeta simulada">Tarjeta (demostración)</option>
+        </select>
+
+        <p class="simulation-note">🔒 Esta es una demostración académica. No se realizan pagos reales.</p>
+
+        <button type="submit" class="checkout-btn">CONFIRMAR PEDIDO</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONFIRMACIÓN -->
+  <section class="success-modal" id="successModal">
+    <div class="success-box">
+      <div class="success-icon">✓</div>
+      <span class="eyebrow">¡COMPRA REALIZADA!</span>
+      <h2>GRACIAS POR<br><span>ELEGIRNOS.</span></h2>
+      <p id="successMessage"></p>
+      <button class="primary-btn" id="finishButton">VOLVER A LA TIENDA</button>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <!-- CONTACTO Y UBICACIÓN -->
+  <section class="contact-section" id="contacto">
+    <div class="contact-heading">
+      <span class="eyebrow">ESTAMOS PARA TI</span>
+      <h2>HABLEMOS DE <span>ESTILO.</span></h2>
+      <p>En Urban Style queremos acompañarte a encontrar tu mejor versión.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="contact-icon">📍</span>
+        <h3>NUESTRA UBICACIÓN</h3>
+        <p>Canalete, Córdoba</p>
+        <small>Colombia</small>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-icon">📱</span>
+        <h3>WHATSAPP</h3>
+        <p>312 602 0219</p>
+        <a href="https://wa.me/573126020219?text=Hola%2C%20estoy%20interesado%20en%20los%20productos%20de%20Urban%20Style."
+           target="_blank" rel="noopener noreferrer">
+          ESCRÍBENOS →
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-icon">🛍️</span>
+        <h3>ATENCIÓN</h3>
+        <p>Pedidos y consultas</p>
+        <small>Estamos para ayudarte</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div>
+        <a href="#inicio" class="logo">URBAN<span>STYLE.</span></a>
+        <p>La moda no tiene reglas. Encuentra tu esencia y expresa tu personalidad.</p>
+      </div>
+
+      <div>
+        <h3>EXPLORA</h3>
+        <a href="#inicio">Inicio</a>
+        <a href="#colecciones">Colecciones</a>
+        <a href="#catalogo">Tienda</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div>
+        <h3>CONTACTO</h3>
+        <p>Canalete, Córdoba · Colombia</p>
+        <p>WhatsApp: 312 602 0219</p>
+        <a href="https://wa.me/573126020219" target="_blank" rel="noopener noreferrer">
+          Atención por WhatsApp →
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 URBAN STYLE. Todos los derechos reservados.</p>
+      <span>DESIGNED FOR YOUR STYLE.</span>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a class="whatsapp-float"
+     href="https://wa.me/573126020219?text=Hola%2C%20quiero%20información%20sobre%20Urban%20Style."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp">
+    ☎
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
